@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package pokemon;
 
-option go_package = "github.com/gimmy/awesome-api/pokemon;pokemon";
-
 import "google/api/annotations.proto";
+
+option go_package = "github.com/gimmy/awesome-api/pokemon;pokemon";
 
 service PokemonService {
   rpc ListPokemons (ListPokemonsRequest) returns (ListPokemonsResponse) {

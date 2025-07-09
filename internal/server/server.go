@@ -8,7 +8,7 @@ import (
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 
-	pokemonpb "github.com/gimmy/awesome-api/pokemon/github.com/gimmy/awesome-api/pokemon"
+	pokemonpb "github.com/gimmy/awesome-api/pokemon"
 )
 
 type pokemonServer struct {
