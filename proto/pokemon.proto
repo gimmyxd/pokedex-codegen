@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pokemon;
+
+option go_package = "github.com/gimmy/awesome-api/pokemon;pokemon";
+
+import "google/api/annotations.proto";
+
+service PokemonService {
+  rpc ListPokemons (ListPokemonsRequest) returns (ListPokemonsResponse) {
+    option (google.api.http) = {
+      get: "/v1/pokemons"
+    };
+  }
+}
+
+message ListPokemonsRequest {}
+
+message Pokemon {
+  string name = 1;
+  int32 id = 2;
+}
+
+message ListPokemonsResponse {
+  repeated Pokemon pokemons = 1;
+}
