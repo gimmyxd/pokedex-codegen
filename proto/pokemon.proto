@@ -4,7 +4,7 @@ package pokemon;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/gimmy/awesome-api/pokemon;pokemon";
+option go_package = "github.com/gimmy/awesome-api/gen/pokemon;pokemon";
 
 service PokemonService {
   rpc ListPokemons (ListPokemonsRequest) returns (ListPokemonsResponse) {
