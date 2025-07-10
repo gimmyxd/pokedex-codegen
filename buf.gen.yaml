@@ -14,3 +14,5 @@ plugins:
       - paths=source_relative
   - remote: buf.build/community/google-gnostic-openapi:v0.7.0
     out: server/gen/openapi
+inputs:
+  - directory: proto

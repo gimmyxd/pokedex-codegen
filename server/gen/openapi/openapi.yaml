@@ -5,7 +5,6 @@ openapi: 3.0.3
 info:
     title: PokemonService API
     version: 0.0.1
-
 paths:
     /v1/pokemons:
         get:
