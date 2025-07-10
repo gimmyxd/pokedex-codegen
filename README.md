@@ -7,9 +7,7 @@
 ```
 pokedex/                    # Project root
 ├── proto/                  # Protobuf definitions (PokemonService, etc.)
-├── pokemon/                # Generated Go code (protos, gRPC, gateway)
-├── openapi/                # Generated OpenAPI schema (YAML & JSON)
-├── internal/server/        # Go service implementation
+├── server/                 # Go service implementation
 ├── main.go                 # Backend entrypoint
 ├── Makefile                # Automation (generate, cleanup)
 ├── buf.gen.yaml            # Buf codegen config
@@ -27,9 +25,9 @@ pokedex/                    # Project root
 ```
 
 ## How it Works
-- **Protobuf-first:** Define your API in `proto/`.
+- **Schema first:** Define your API in `proto/`.
 - **Buf:** Generates Go code, gRPC server, grpc-gateway, and OpenAPI schema.
-- **Go Backend:** Implements the PokemonService, serves both gRPC and REST endpoints, and exposes OpenAPI docs.
+- **Go Backend:** Implements the PokemonService, serves both gRPC and REST endpoints
 - **React Frontend:** Uses Orval to generate type-safe hooks and models from the OpenAPI schema, providing a beautiful, interactive Pokédex UI.
 
 See each subdirectory's README for more details on setup, code generation, and running the app.
